@@ -1,13 +1,18 @@
 import React, { useState } from 'react'
+import DemoUseEffect from './DemoUseEffect';
 
 const DemoUseState = () => {
     const [color,setColor] = useState("red");
+    const [demoUseEffect, setDemoUseEffect] = useState(false);
     const [car, setCar] = useState({
         brand: "ford",
         model: "Mustang",
         year: "1678",
         color: "black"
     })
+    const handleShowDemoUseEffect = () => {
+        setDemoUseEffect(true);
+    }
   return (
     <>
     <h3>My color is {color}!</h3>
@@ -23,8 +28,9 @@ const DemoUseState = () => {
     <button type='button' onClick={()=>{setCar((prev)=>{return {...prev,brand: "BMW"}})}}>Change brand</button>
     <button type='button' onClick={()=>{setCar((prev)=>{return {...prev,model: "sedan"}})}}>Change model</button>
     <button type='button' onClick={()=>{setCar((prev)=>{return {...prev,color: "blue"}})}}>Change color</button>
-    <button type='button' onClick={()=>{setCar((prev)=>{return {...prev,year: "2013"}})}}>Change year</button>
-
+    <button type='button' onClick={()=>{setCar((prev)=>{return {...prev,year: "2013"}})}}>Change year</button><br/>
+    <button onClick={handleShowDemoUseEffect}>useEffect example</button>
+    {demoUseEffect && <DemoUseEffect/>}
     </>
   )
 }

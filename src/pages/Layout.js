@@ -1,31 +1,25 @@
-import React from 'react'
-import { Link, Outlet } from 'react-router-dom'
+import React from "react";
+import { Link, Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
     <>
-    <nav>
+      <nav>
         <ul>
-            <li>
-                <Link to="/">Home</Link>
-            </li>
-            <li>
-                <Link to="/useState">UseState</Link>
-            </li>
-            <li>
-                <Link to="/useEffect">UseEffect</Link>
-            </li>
-            <li>
-                <Link to="/blogs">Blogs</Link>
-            </li>
-            <li>
-                <Link to="/contact">Contact</Link>
-            </li>
+          <li>
+            <Link to="/demo">Demo of useState, useEffect and useContext</Link>
+          </li>
+          <li>
+            <Link to="/useStateVSuseReducer">useState vs useReducer</Link>
+          </li>
+          <li>
+            <Link to="/useRef">UseRef</Link>
+          </li>
         </ul>
-    </nav>
-    <Outlet />
+      </nav>
+      <Outlet />
     </>
-)
-}
+  );
+};
 
-export default Layout
+export default Layout;
