@@ -7,13 +7,19 @@ const Layout = () => {
       <nav>
         <ul>
           <li>
-            <Link to="/demo">Demo of useState, useEffect and useContext</Link>
+            <Link to="/">Demo of useState, useEffect and useContext</Link>
           </li>
           <li>
             <Link to="/useStateVSuseReducer">useState vs useReducer</Link>
           </li>
           <li>
             <Link to="/useRef">UseRef</Link>
+          </li>
+          <li>
+            <Link to="/useCallbackVSuseMemo">UseCallbackVSuseMemo</Link>
+          </li>
+          <li>
+            <Link to="/customHook">Custom Hook</Link>
           </li>
         </ul>
       </nav>
